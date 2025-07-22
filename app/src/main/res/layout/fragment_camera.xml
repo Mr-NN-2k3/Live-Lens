@@ -1,0 +1,143 @@
+<!-- res/layout/fragment_camera.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Camera surface -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_gravity="bottom">
+
+
+
+
+    <!-- Overlay container -->
+    <LinearLayout
+        android:id="@+id/overlayContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:background="#66000000"
+        >
+
+        <ImageView
+            android:id="@+id/imgWeather"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+            <TextView
+                android:id="@+id/txtTime"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:drawableStart="@android:drawable/ic_menu_recent_history"
+                android:drawablePadding="4dp"/>
+
+            <TextView
+                android:id="@+id/txtTemp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:drawableStart="@android:drawable/star_on"
+                android:drawablePadding="4dp"/>
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCoords"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:drawableStart="@android:drawable/ic_menu_mylocation"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:drawableStart="@android:drawable/ic_menu_mapmode"
+            android:drawablePadding="4dp"/>
+    </LinearLayout>
+
+    <!-- Camera controls with system icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1"
+
+        android:background="#66000000"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/capture"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_camera"
+            android:tint="@android:color/white"
+            android:contentDescription="Capture" />
+
+        <ImageButton
+            android:id="@+id/switchCamera"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_rotate"
+            android:tint="@android:color/white"
+            android:contentDescription="Switch Camera"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/flash"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/button_onoff_indicator_off"
+            android:tint="@android:color/white"
+            android:contentDescription="Flash"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/photoMap"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_mapmode"
+            android:tint="@android:color/white"
+            android:contentDescription="Photo Map"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
